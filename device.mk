@@ -23,6 +23,9 @@ $(call inherit-product, vendor/xiaomi/redwood/redwood-vendor.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Call the BCR setup
+$(call inherit-product-if-exists, vendor/bcr/bcr.mk)
+
 # API
 PRODUCT_SHIPPING_API_LEVEL := 31
 
